@@ -14,6 +14,7 @@
             let index = gridInstance.getRowIndexByKey(editRowKey);
             index = index === -1 ? 0 : index;
             let isVisible = gridInstance.cellValue(index, "AddressRequired");
+            alert('AddressRequired is ' + isVisible);
             item.visible = isVisible;
         }
     }
