@@ -1,26 +1,24 @@
 /*!
 * DevExtreme (dx.messages.fr.js)
-* Version: 20.2.6
-* Build date: Tue Mar 16 2021
+* Version: 21.2.7
+* Build date: Mon Apr 11 2022
 *
-* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
+* Copyright (c) 2012 - 2022 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
 */
 "use strict";
 
 ! function(root, factory) {
     if ("function" === typeof define && define.amd) {
-        define(function(require) {
+        define((function(require) {
             factory(require("devextreme/localization"))
-        })
+        }))
+    } else if ("object" === typeof module && module.exports) {
+        factory(require("devextreme/localization"))
     } else {
-        if ("object" === typeof module && module.exports) {
-            factory(require("devextreme/localization"))
-        } else {
-            factory(DevExpress.localization)
-        }
+        factory(DevExpress.localization)
     }
-}(this, function(localization) {
+}(0, (function(localization) {
     localization.loadMessages({
         fr: {
             Yes: "Oui",
@@ -80,7 +78,7 @@
             "dxFileUploader-upload": "T\xe9l\xe9charger",
             "dxFileUploader-uploaded": "T\xe9l\xe9charg\xe9",
             "dxFileUploader-readyToUpload": "Pr\xeat \xe0 t\xe9l\xe9charger",
-            "dxFileUploader-uploadAbortedMessage": "Importation annul\xe9e",
+            "dxFileUploader-uploadAbortedMessage": "T\xe9l\xe9chargement annul\xe9",
             "dxFileUploader-uploadFailedMessage": "\xc9chec du t\xe9l\xe9chargement",
             "dxFileUploader-invalidFileExtension": "Type de fichier non autoris\xe9",
             "dxFileUploader-invalidMaxFileSize": "Fichier trop volumineux",
@@ -157,6 +155,8 @@
             "dxDataGrid-headerFilterEmptyValue": "(aucune valeur)",
             "dxDataGrid-headerFilterOK": "OK",
             "dxDataGrid-headerFilterCancel": "Annuler",
+            "dxDataGrid-ariaAdaptiveCollapse": "Masquer les donn\xe9es suppl\xe9mentaires",
+            "dxDataGrid-ariaAdaptiveExpand": "Afficher des donn\xe9es suppl\xe9mentaires",
             "dxDataGrid-ariaColumn": "Colonne",
             "dxDataGrid-ariaValue": "Valeur",
             "dxDataGrid-ariaFilterCell": "Filtre de cellule",
@@ -166,11 +166,14 @@
             "dxDataGrid-ariaSearchInGrid": "Rechercher dans la grille",
             "dxDataGrid-ariaSelectAll": "S\xe9lectionner tout",
             "dxDataGrid-ariaSelectRow": "S\xe9lectionner ligne",
+            "dxDataGrid-ariaToolbar": "Barre d'outils de la grille de donn\xe9es",
             "dxDataGrid-filterBuilderPopupTitle": "Cr\xe9ation de filtre",
             "dxDataGrid-filterPanelCreateFilter": "Cr\xe9er un filtre",
             "dxDataGrid-filterPanelClearFilter": "Supprimer",
             "dxDataGrid-filterPanelFilterEnabledHint": "Activer le filtre",
             "dxTreeList-ariaTreeList": "Liste arborescente",
+            "dxTreeList-ariaSearchInGrid": "Rechercher dans l'arborescence",
+            "dxTreeList-ariaToolbar": "Barre d'outils de la liste arborescente",
             "dxTreeList-editingAddRowToNode": "Ajouter",
             "dxPager-infoText": "Page {0} sur {1} ({2} \xe9lements)",
             "dxPager-pagesCountText": "sur",
@@ -289,6 +292,68 @@
             "dxHtmlEditor-dialogInsertTableCaption": "Ins\xe9rer un tableau",
             "dxHtmlEditor-heading": "Titre",
             "dxHtmlEditor-normalText": "Texte normal",
+            "dxHtmlEditor-background": "Couleur de l'arri\xe8re plan",
+            "dxHtmlEditor-bold": "Gras",
+            "dxHtmlEditor-color": "Couleur de police",
+            "dxHtmlEditor-font": "Police",
+            "dxHtmlEditor-italic": "Italique",
+            "dxHtmlEditor-link": "Ajouter un hyperlien",
+            "dxHtmlEditor-image": "Ajouter une image",
+            "dxHtmlEditor-size": "Taille",
+            "dxHtmlEditor-strike": "Barr\xe9",
+            "dxHtmlEditor-subscript": "Indice",
+            "dxHtmlEditor-superscript": "Suscription",
+            "dxHtmlEditor-underline": "Souligner",
+            "dxHtmlEditor-blockquote": "Citation",
+            "dxHtmlEditor-header": "Ent\xeate",
+            "dxHtmlEditor-increaseIndent": "Augmenter le retrait",
+            "dxHtmlEditor-decreaseIndent": "R\xe9duire le retrait",
+            "dxHtmlEditor-orderedList": "Liste ordonn\xe9e",
+            "dxHtmlEditor-bulletList": "Liste \xe0 puces",
+            "dxHtmlEditor-alignLeft": "Aligner \xe0 gauche",
+            "dxHtmlEditor-alignCenter": "Centrer",
+            "dxHtmlEditor-alignRight": "Aligner \xe0 droite",
+            "dxHtmlEditor-alignJustify": "Justifier",
+            "dxHtmlEditor-codeBlock": "Bloc de code",
+            "dxHtmlEditor-variable": "Ajouter une variable",
+            "dxHtmlEditor-undo": "Annuler",
+            "dxHtmlEditor-redo": "Refaire",
+            "dxHtmlEditor-clear": "Supprimer le formattage",
+            "dxHtmlEditor-insertTable": "Ins\xe9rer tableau",
+            "dxHtmlEditor-insertHeaderRow": "Ins\xe9rer une ligne d'en-t\xeate",
+            "dxHtmlEditor-insertRowAbove": "Ins\xe9rer une ligne au-dessus",
+            "dxHtmlEditor-insertRowBelow": "Ins\xe9rer une ligne ci-dessous",
+            "dxHtmlEditor-insertColumnLeft": "Ins\xe9rer une colonne \xe0 gauche",
+            "dxHtmlEditor-insertColumnRight": "Ins\xe9rer une colonne \xe0 droite",
+            "dxHtmlEditor-deleteColumn": "Supprimer la colonne",
+            "dxHtmlEditor-deleteRow": "Supprimer la ligne",
+            "dxHtmlEditor-deleteTable": "Supprimer le tableau",
+            "dxHtmlEditor-cellProperties": "Propri\xe9t\xe9s de la cellule",
+            "dxHtmlEditor-tableProperties": "Propri\xe9t\xe9s du tableau",
+            "dxHtmlEditor-insert": "Ins\xe9rer",
+            "dxHtmlEditor-delete": "Supprimer",
+            "dxHtmlEditor-border": "Bordure",
+            "dxHtmlEditor-style": "Style",
+            "dxHtmlEditor-width": "Largeur",
+            "dxHtmlEditor-height": "Hauteur",
+            "dxHtmlEditor-borderColor": "Couleur",
+            "dxHtmlEditor-tableBackground": "Arri\xe8re plan",
+            "dxHtmlEditor-dimensions": "Dimensions",
+            "dxHtmlEditor-alignment": "Alignement",
+            "dxHtmlEditor-horizontal": "Horizontal",
+            "dxHtmlEditor-vertical": "Vertical",
+            "dxHtmlEditor-paddingVertical": "Rembourrage vertical",
+            "dxHtmlEditor-paddingHorizontal": "Rembourrage horizontal",
+            "dxHtmlEditor-pixels": "Pixels",
+            "dxHtmlEditor-list": "Liste",
+            "dxHtmlEditor-ordered": "En ordre",
+            "dxHtmlEditor-bullet": "Point",
+            "dxHtmlEditor-align": "Aligner",
+            "dxHtmlEditor-center": "Centrer",
+            "dxHtmlEditor-left": "Gauche",
+            "dxHtmlEditor-right": "Droite",
+            "dxHtmlEditor-indent": "Retrait",
+            "dxHtmlEditor-justify": "Justifier",
             "dxFileManager-newDirectoryName": "R\xe9pertoire sans titre",
             "dxFileManager-rootDirectoryName": "Fichiers",
             "dxFileManager-errorNoAccess": "Acc\xe8s interdit. L'op\xe9ration ne peut se terminer.",
@@ -300,7 +365,7 @@
             "dxFileManager-errorMaxFileSizeExceeded": "Taille du fichier d\xe9passe la limite maximum permise.",
             "dxFileManager-errorInvalidSymbols": "Ce nom contient des caract\xe8res invalides.",
             "dxFileManager-errorDefault": "Erreur non sp\xe9cifi\xe9.",
-            "dxFileManager-errorDirectoryOpenFailed": "Le r\xe9pertoire ne peut pas \xeatre ouvert",
+            "dxFileManager-errorDirectoryOpenFailed": "Le r\xe9pertoire ne peut s'ouvrir",
             "dxFileManager-commandCreate": "Nouveau r\xe9pertoire",
             "dxFileManager-commandRename": "Renommer",
             "dxFileManager-commandMove": "D\xe9placer",
@@ -313,9 +378,9 @@
             "dxFileManager-commandDetails": "Mode d\xe9tails",
             "dxFileManager-commandClearSelection": "Vider s\xe9lection",
             "dxFileManager-commandShowNavPane": "Basculer le volet de navigation",
-            "dxFileManager-dialogDirectoryChooserMoveTitle": "D\xe9placer",
+            "dxFileManager-dialogDirectoryChooserMoveTitle": "D\xe9placer vers",
             "dxFileManager-dialogDirectoryChooserMoveButtonText": "D\xe9placer",
-            "dxFileManager-dialogDirectoryChooserCopyTitle": "Copier",
+            "dxFileManager-dialogDirectoryChooserCopyTitle": "Copier vers",
             "dxFileManager-dialogDirectoryChooserCopyButtonText": "Copier",
             "dxFileManager-dialogRenameItemTitle": "Renommer",
             "dxFileManager-dialogRenameItemButtonText": "Sauvegarder",
@@ -324,7 +389,7 @@
             "dxFileManager-dialogDeleteItemTitle": "Supprimer",
             "dxFileManager-dialogDeleteItemButtonText": "Supprimer",
             "dxFileManager-dialogDeleteItemSingleItemConfirmation": "Voulez-vous vraiment supprimer {0}?",
-            "dxFileManager-dialogDeleteItemMultipleItemsConfirmation": "Voulez-vous vraiment supprimer {0} \xe9l\xe9ments?",
+            "dxFileManager-dialogDeleteItemMultipleItemsConfirmation": "Voulez-vous vraiment supprimer {0}?",
             "dxFileManager-dialogButtonCancel": "Annuler",
             "dxFileManager-editingCreateSingleItemProcessingMessage": "Cr\xe9er un r\xe9pertoire dans {0}",
             "dxFileManager-editingCreateSingleItemSuccessMessage": "R\xe9pertoire cr\xe9\xe9 dans {0}",
@@ -390,7 +455,7 @@
             "dxDiagram-commandLineWidth": "Largeur de ligne",
             "dxDiagram-commandLineStyle": "Style de ligne",
             "dxDiagram-commandLineStyleSolid": "Solide",
-            "dxDiagram-commandLineStyleDotted": "Point\xe9e",
+            "dxDiagram-commandLineStyleDotted": "Point\xe9",
             "dxDiagram-commandLineStyleDashed": "Pointill\xe9",
             "dxDiagram-commandFillColor": "Couleur remplissage",
             "dxDiagram-commandAlignLeft": "Aligner \xe0 gauche",
@@ -415,10 +480,10 @@
             "dxDiagram-commandGridSize": "Taille de la grille",
             "dxDiagram-commandZoomLevel": "Niveau de zoom",
             "dxDiagram-commandAutoZoom": "Zoom automatique",
-            "dxDiagram-commandFitToContent": "Adapter au contenu",
+            "dxDiagram-commandFitToContent": "Ajuster au contenu",
             "dxDiagram-commandFitToWidth": "Ajuster \xe0 la largeur",
-            "dxDiagram-commandAutoZoomByContent": "Zoom automatique par contenu",
-            "dxDiagram-commandAutoZoomByWidth": "Zoom automatique par largeur",
+            "dxDiagram-commandAutoZoomByContent": "Auto zoom par contenu",
+            "dxDiagram-commandAutoZoomByWidth": "Auto zoom par largeur",
             "dxDiagram-commandSimpleView": "Vue simple",
             "dxDiagram-commandCut": "Couper",
             "dxDiagram-commandCopy": "Copier",
@@ -432,10 +497,10 @@
             "dxDiagram-commandInsertShapeImage": "Ins\xe9rer une image...",
             "dxDiagram-commandEditShapeImage": "Changer image...",
             "dxDiagram-commandDeleteShapeImage": "Supprimer image",
-            "dxDiagram-commandLayoutLeftToRight": "De gauche \xe0 droite",
-            "dxDiagram-commandLayoutRightToLeft": "De droite \xe0 gauche",
-            "dxDiagram-commandLayoutTopToBottom": "De haut en bas",
-            "dxDiagram-commandLayoutBottomToTop": "De bas en haut",
+            "dxDiagram-commandLayoutLeftToRight": "Gauche \xe0 droite",
+            "dxDiagram-commandLayoutRightToLeft": "Droite \xe0 gauche",
+            "dxDiagram-commandLayoutTopToBottom": "Haut en bas",
+            "dxDiagram-commandLayoutBottomToTop": "Bas en haut",
             "dxDiagram-unitIn": "po",
             "dxDiagram-unitCm": "cm",
             "dxDiagram-unitPx": "px",
@@ -447,9 +512,9 @@
             "dxDiagram-dialogEditShapeImageLabelText": "ou d\xe9poser le fichier ici",
             "dxDiagram-uiExport": "Exporter",
             "dxDiagram-uiProperties": "Propri\xe9t\xe9s",
-            "dxDiagram-uiSettings": "R\xe9glages",
-            "dxDiagram-uiShowToolbox": "Afficher la bo\xeete \xe0 outils",
-            "dxDiagram-uiSearch": "Chercher",
+            "dxDiagram-uiSettings": "Param\xe8tres",
+            "dxDiagram-uiShowToolbox": "Afficher les outils",
+            "dxDiagram-uiSearch": "Recherche",
             "dxDiagram-uiStyle": "Style",
             "dxDiagram-uiLayout": "Disposition",
             "dxDiagram-uiLayoutTree": "Arbre",
@@ -505,9 +570,9 @@
             "dxDiagram-shapeCardWithImageOnTop": "Carte avec image sur le dessus",
             "dxDiagram-shapeCardWithImageOnRight": "Carte avec image \xe0 droite",
             "dxGantt-dialogTitle": "Titre",
-            "dxGantt-dialogStartTitle": "D\xe9but",
+            "dxGantt-dialogStartTitle": "D\xe9part",
             "dxGantt-dialogEndTitle": "Fin",
-            "dxGantt-dialogProgressTitle": "Le progr\xe8s",
+            "dxGantt-dialogProgressTitle": "Progr\xe8s",
             "dxGantt-dialogResourcesTitle": "Ressources",
             "dxGantt-dialogResourceManagerTitle": "Gestionnaire de ressources",
             "dxGantt-dialogTaskDetailsTitle": "D\xe9tails de la t\xe2che",
@@ -519,22 +584,34 @@
             "dxGantt-contextMenuDeleteTask": "Supprimer la t\xe2che",
             "dxGantt-contextMenuDeleteDependency": "Supprimer la d\xe9pendance",
             "dxGantt-dialogTaskDeleteConfirmation": "La suppression d'une t\xe2che supprime \xe9galement toutes ses d\xe9pendances et sous-t\xe2ches. \xcates-vous s\xfbr de vouloir supprimer cette t\xe2che?",
-            "dxGantt-dialogDependencyDeleteConfirmation": "Voulez-vous vraiment supprimer la d\xe9pendance de la t\xe2che?",
-            "dxGantt-dialogResourcesDeleteConfirmation": "La suppression d'une ressource la supprime \xe9galement des t\xe2ches auxquelles cette ressource est affect\xe9e. Voulez-vous vraiment supprimer ces ressources? Ressource: {0}",
-            "dxGantt-dialogConstraintCriticalViolationMessage": "La t\xe2che que vous essayez de d\xe9placer est li\xe9e \xe0 une deuxi\xe8me t\xe2che par une relation de d\xe9pendance. Ce changement entrerait en conflit avec les r\xe8gles de d\xe9pendance. Comment aimeriez-vous proceder?",
+            "dxGantt-dialogDependencyDeleteConfirmation": "\xcates-vous s\xfbr de vouloir supprimer la d\xe9pendance de la t\xe2che?",
+            "dxGantt-dialogResourcesDeleteConfirmation": "La suppression d'une ressource la supprime \xe9galement des t\xe2ches auxquelles cette ressource est affect\xe9e. Voulez-vous vraiment supprimer ces ressources? Ressources : {0}",
+            "dxGantt-dialogConstraintCriticalViolationMessage": "La t\xe2che que vous essayez de d\xe9placer est li\xe9e \xe0 une deuxi\xe8me t\xe2che par une relation de d\xe9pendance. Ce changement serait en conflit avec les r\xe8gles de d\xe9pendance. Comment aimeriez-vous proceder?",
             "dxGantt-dialogConstraintViolationMessage": "La t\xe2che que vous essayez de d\xe9placer est li\xe9e \xe0 une deuxi\xe8me t\xe2che par une relation de d\xe9pendance. Comment aimeriez-vous proceder?",
             "dxGantt-dialogCancelOperationMessage": "Annuler l'op\xe9ration",
             "dxGantt-dialogDeleteDependencyMessage": "Supprimer la d\xe9pendance",
             "dxGantt-dialogMoveTaskAndKeepDependencyMessage": "D\xe9placer la t\xe2che et conserver la d\xe9pendance",
+            "dxGantt-dialogConstraintCriticalViolationSeveralTasksMessage": "La t\xe2che que vous essayez de d\xe9placer est li\xe9e \xe0 une autre t\xe2che par des relations de d\xe9pendance. Ce changement serait en conflit avec les r\xe8gles de d\xe9pendance. Comment aimeriez-vous proceder?",
+            "dxGantt-dialogConstraintViolationSeveralTasksMessage": "La t\xe2che que vous essayez de d\xe9placer est li\xe9e \xe0 une autre t\xe2che par des relations de d\xe9pendance. Comment aimeriez-vous proceder?",
+            "dxGantt-dialogDeleteDependenciesMessage": "Supprimer les d\xe9pendances",
+            "dxGantt-dialogMoveTaskAndKeepDependenciesMessage": "D\xe9placer la t\xe2che et conserver les d\xe9pendances",
             "dxGantt-undo": "Annuler",
             "dxGantt-redo": "Refaire",
             "dxGantt-expandAll": "D\xe9velopper tout",
             "dxGantt-collapseAll": "Tout r\xe9duire",
-            "dxGantt-addNewTask": "Ajouter nouvelle t\xe2che",
-            "dxGantt-deleteSelectedTask": "Supprimer t\xe2che s\xe9lectionn\xe9e",
+            "dxGantt-addNewTask": "Ajouter une nouvelle t\xe2che",
+            "dxGantt-deleteSelectedTask": "Supprimer la t\xe2che s\xe9lectionn\xe9e",
             "dxGantt-zoomIn": "Agrandir",
             "dxGantt-zoomOut": "D\xe9zoomer",
-            "dxGantt-fullScreen": "Plein \xe9cran"
+            "dxGantt-fullScreen": "Plein \xe9cran",
+            "dxGantt-quarter": "Q{0}",
+            "dxGantt-sortingAscendingText": "Tri croissant",
+            "dxGantt-sortingDescendingText": "Tri d\xe9croissant",
+            "dxGantt-sortingClearText": "Supprimer le tri",
+            "dxGantt-showResources": "Afficher les ressources",
+            "dxGantt-showDependencies": "Afficher les d\xe9pendances",
+            "dxGantt-dialogStartDateValidation": "La date de d\xe9but doit \xeatre post\xe9rieure au {0}",
+            "dxGantt-dialogEndDateValidation": "La date de fin doit \xeatre post\xe9rieure au {0}"
         }
     })
-});
+}));
